@@ -1,0 +1,53 @@
+name: Publish Taro docs image to Docker hub
+
+on: [push, pull_request]
+
+env:
+  CI: true
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Cache pnpm modules and build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            build/taro-docs
+          key: ${{ runner.os }}-github
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - name: install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+
+      - name: Build
+        run: pnpm run build:github
+     
+      - name: zip zite
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r taro-docs.zip build/taro-docs
+
+      - name: Generate release tag
+        id: tag
+        run: |
+          echo "release_tag=sites_$(date +"%Y.%m.%d_%H_%M_%S")" >> $GITHUB_OUTPUT
+
+      - name: GH Release
+        # You may pin to the exact commit or the version.
+        # uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
+        uses: softprops/action-gh-release@v0.1.15
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          files: taro-docs.zip

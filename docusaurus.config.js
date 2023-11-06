@@ -26,7 +26,7 @@ const siteConfig = {
   title: 'Taro 文档' /* title for your website */,
   tagline: 'Taro 是一个开放式跨端跨框架解决方案，支持使用 React/Vue/Nerv 等框架来开发微信/京东/百度/支付宝/字节跳动/ QQ 小程序/H5/React Native 等应用。',
   url: url[BASE_DOMAIN], /* your website url */
-  baseUrl: baseUrl[BASE_DOMAIN], /* base url for your project */
+  baseUrl: '/mirror/taro-docs', /* base url for your project */
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   onDuplicateRoutes: 'warn',
@@ -168,18 +168,18 @@ const siteConfig = {
           label: '博客',
           position: 'left',
         },
-        {href: 'https://github.com/NervJS/taro/issues', label: '问题反馈', position: 'left'},
-        {href: 'https://deco-preview.jd.com?from=taro-docs', label: '设计稿生成代码', position: 'left'},
+        { href: 'https://github.com/NervJS/taro/issues', label: '问题反馈', position: 'left' },
+        { href: 'https://deco-preview.jd.com?from=taro-docs', label: '设计稿生成代码', position: 'left' },
         {
           label: '生态系统',
           position: 'right',
           items:[
-            {href: 'https://github.com/NervJS/taro/discussions', label: '论坛'},
-            {href: 'https://taro-ext.jd.com', label: '物料市场'},
-            {to: 'showcase', label: '案例'},
-            {href: 'https://nutui.jd.com/#/', label: 'NutUI'},
-            {href: 'https://taro-ui.jd.com', label: 'Taro UI'},
-            {href: 'https://taro.jd.com/jdmp/index.html', label: '京东小程序'},
+            { href: 'https://github.com/NervJS/taro/discussions', label: '论坛' },
+            { href: 'https://taro-ext.jd.com', label: '物料市场' },
+            { to: 'showcase', label: '案例' },
+            { href: 'https://nutui.jd.com/#/', label: 'NutUI' },
+            { href: 'https://taro-ui.jd.com', label: 'Taro UI' },
+            { href: 'https://taro.jd.com/jdmp/index.html', label: '京东小程序' },
           ]
         },
         {
