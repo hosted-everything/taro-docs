@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktaro_docs=self.webpackChunktaro_docs||[]).push([[11169],{51690:function(o){o.exports=JSON.parse('{"permalink":"/mirror/taro-docs/en/blog/page/4","page":4,"postsPerPage":10,"totalPages":5,"totalCount":44,"previousPage":"/mirror/taro-docs/en/blog/page/3","nextPage":"/mirror/taro-docs/en/blog/page/5","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
