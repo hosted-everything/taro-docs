@@ -6,7 +6,7 @@ declare module '../../index' {
       /** 是否正在充电中 */
       isCharging: boolean
       /** 设备电量，范围 1 - 100 */
-      level: string
+      level: number
     }
   }
 
@@ -38,7 +38,7 @@ declare module '../../index' {
     getBatteryInfoSync(): getBatteryInfoSync.Result
 
     /** 获取设备电量。同步 API Taro.getBatteryInfoSync 在 iOS 上不可用。
-     * @supported weapp, alipay, swan, jd, qq, h5
+     * @supported weapp, alipay, swan, jd, qq, h5, harmony_hybrid
      * @see https://developers.weixin.qq.com/miniprogram/dev/api/device/battery/wx.getBatteryInfo.html
      */
     getBatteryInfo(option?: getBatteryInfo.Option): Promise<getBatteryInfo.SuccessCallbackResult>
