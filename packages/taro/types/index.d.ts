@@ -171,6 +171,7 @@
 /// <reference path="taro.component.d.ts" />
 /// <reference path="taro.config.d.ts" />
 /// <reference path="taro.lifecycle.d.ts" />
+/// <reference path="taro.runtime.d.ts" />
 
 /// <reference types="@tarojs/plugin-platform-alipay/types/shims-alipay" />
 /// <reference types="@tarojs/plugin-platform-jd/types/shims-jd" />
@@ -190,6 +191,6 @@ declare namespace Taro {
   interface TaroStatic {}
 }
 declare global {
-  const defineAppConfig: (config: Taro.Config) => Taro.Config
-  const definePageConfig: (config: Taro.Config) => Taro.Config
+  const defineAppConfig: (config: Taro.AppConfig) => Taro.AppConfig
+  const definePageConfig: (config: Taro.PageConfig) => Taro.Config
 }
