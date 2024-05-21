@@ -69,9 +69,10 @@ module.exports = {
       {
         label: 'React Native',
         type: 'category',
-        items: ['react-native', 'react-native-remind'],
+        items: ['react-native', 'react-native-remind','react-native-harmony'],
       },
-      'harmony'
+      'harmony',
+      'harmony-hybrid/index'
     ],
     进阶指南: [
       'config-detail',
@@ -200,6 +201,7 @@ module.exports = {
       'components/viewContainer/native-slot',
       'components/viewContainer/page-container',
       'components/viewContainer/root-portal',
+      'components/viewContainer/script',
       'components/viewContainer/scroll-view',
       'components/viewContainer/slot',
       'components/viewContainer/swiper',
@@ -231,10 +233,17 @@ module.exports = {
       'components/forms/textarea'
     ],
     'Skyline': [
+      'components/skyline/draggable-sheet',
+      'components/skyline/grid-builder',
       'components/skyline/grid-view',
+      'components/skyline/list-builder',
       'components/skyline/list-view',
+      'components/skyline/nested-scroll-body',
+      'components/skyline/nested-scroll-header',
+      'components/skyline/open-container',
       'components/skyline/share-element',
       'components/skyline/snapshot',
+      'components/skyline/span',
       'components/skyline/sticky-header',
       'components/skyline/sticky-section',
     ],
